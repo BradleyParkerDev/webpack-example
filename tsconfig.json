@@ -2,19 +2,19 @@
 	"compilerOptions": {
 		"target": "es2016",
 		"module": "commonjs",
-		"rootDir": "./src",
-		"outDir": "./dist",
-    "sourceMap": true,
+		"rootDir": "resources/src",
+		"outDir": "resources/dist",
+    	"sourceMap": true,
 		"esModuleInterop": true,
 		"strict": true,
 		"skipLibCheck": true,
 		"resolveJsonModule": true,
-		"typeRoots": ["./node_modules/@types", "./src/types"],
+		"typeRoots": ["./node_modules/@types", "resources/src/typesipt/types"],
 		"noUnusedParameters": false,
     "allowJs": true,
     "checkJs": false // If you don't want to check JavaScript types
 	},
-	"include": ["src/**/*.ts"],
+	"include": ["resources/src/**/*.ts"],
 	"exclude": ["node_modules"]
 }
   

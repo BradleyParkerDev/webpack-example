@@ -1,7 +1,7 @@
 /// <reference types="webpack/module" /> 
-
-import  generateJoke  from "./generateJoke";
-import { getPokemon } from "./getPokemon";
+import '../css/main.css'
+import  generateJoke  from "./lib/generateJoke";
+import { getPokemon } from "./lib/getPokemon";
 console.log('Recovered work!')
 const joke = generateJoke();
 console.log(joke);

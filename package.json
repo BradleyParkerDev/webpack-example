@@ -7,7 +7,7 @@
     "clean": "rm -rf resources/dist",
     "build": "webpack",
     "start": "npm run clean && npm run build",
-    "dev": "webpack serve --open"
+    "dev": "webpack serve --open --watch"
   },
   "keywords": [],
   "author": "",

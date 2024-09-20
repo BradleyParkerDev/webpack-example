@@ -10,7 +10,7 @@ module.exports = {
                 use: {
                     loader: 'ts-loader',
                     options: {
-                        transpileOnly: true, // Speeds up builds without type checking
+                        transpileOnly: true,
                     },
                 },
                 exclude: /node_modules/,
@@ -30,12 +30,23 @@ module.exports = {
         filename: 'bundle.js',
     },
     devServer: {
-        static: {
-            directory: path.join(__dirname, 'resources/dist'),
+        headers: {
+            'Cache-Control': 'no-store',
         },
-        compress: true,
+        static: [
+            {
+                directory: path.resolve(__dirname, 'resources/dist'),
+            },
+            {
+                directory: path.resolve(__dirname, 'resources/src/templates'),
+            }
+        ],
         port: 3000,
+        open: true,
         hot: true,
-        watchFiles: ['resources/**/*'], // Watch all files in the resources directory
-    },
+        compress: true,
+        historyApiFallback: true,
+    }
+    
+    
 };
